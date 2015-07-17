@@ -15,5 +15,6 @@ class ResultsView(TemplateView):
     def get_context_data(self, **kwargs):
         username = self.request.GET.get('username', '')
         context = super().get_context_data(**kwargs)
+        context['username'] = username
         context['artists'] = get_hypem_artists(username)
         return context
