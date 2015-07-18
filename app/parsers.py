@@ -17,6 +17,9 @@ def add_songkick_url(dictionary):
 
 
 def get_hypem_artists(username):
+    """
+    Returns an ordered dictionary { 'artist_name': {'count: int, 'songkick_url': str}
+    """
     artist_list = []
     cleaned_artist_list = []
     artists_od = OrderedDict()

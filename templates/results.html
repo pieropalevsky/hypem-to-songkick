@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
+    <h1>{{ username|title }}'s Favorites</h1>
     <p>{{ artists|length }} Total Artists</p>
     {% for key, value in artists.items %}
         <p>Artist: <a target="_blank" href="{{ value.url }}">{{ key|title }}</a> Favorited: {{ value.count }} </p>
